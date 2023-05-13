@@ -47,11 +47,17 @@ app.post('/save', (req, res) => {
   });
 });
 
-app.get('/up', (req, res) =>  {
-  res.render('Editar.ejs')
+app.get('/up/:id', (req, res) =>  {
+  const id = req.params.id;
+  connection.query('SELECT * FROM productos WHERE id = ?', [id], (error, results, fields) => {
+    if (error) throw error;
+    res.render('Editar.ejs', { data: results[0] });
+  });
 });
 
-app.post('/update/<%= data.id %>', (req, res) => {
+
+app.post('/update/:id', (req, res) => {
+  const id = req.params.id;
   const nombre = req.body.nombre;
   const descripcion = req.body.descripcion;
   const precio = req.body.precio;
