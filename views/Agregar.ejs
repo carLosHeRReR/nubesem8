@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Nuevo Producto</title>
+</head>
+<body>
+    <form action="/save" method="POST">
+        <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" tabindex="1">
+        </div>   
+        <div class="mb-3">
+          <label for="descripcion" class="form-label">Descripción</label>
+          <input type="text" class="form-control" id="descripcion" name="descripcion" tabindex="1">
+          </div> 
+        <div class="mb-3">
+          <label for="precio" class="form-label">Precio</label>
+          <input type="text" class="form-control" id="precio" name="precio" tabindex="1">
+          </div>  
+        <center>
+          <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
+          <a href="/" class="btn btn-secondary">Cancelar</a>
+
+        </center>                                
+        
+    </form>
+</body>
+</html>

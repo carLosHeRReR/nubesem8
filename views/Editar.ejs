@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Editar producto</title>
+</head>
+<body>
+	<h1>Editar producto</h1>
+	<form method="post" action="/update/<%= data.id %>">
+		<label for="nombre">Nombre:</label>
+		<input type="text" name="nombre" id="nombre" value="<%= data.nombre %>">
+		<br>
+		<label for="descripcion">Descripción:</label>
+		<input type="text" name="descripcion" id="descripcion" value="<%= data.descripcion %>">
+		<br>
+		<label for="precio">Precio:</label>
+		<input type="text" name="precio" id="precio" value="<%= data.precio %>">
+		<br>
+		<button type="submit" class="btn btn-primary">Guardar</button>
+	</form>
+	<br>
+	<a href="/">Volver al inicio</a>
+</body>
+</html>
